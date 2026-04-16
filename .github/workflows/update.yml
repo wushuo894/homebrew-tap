@@ -1,0 +1,25 @@
+name: update
+
+on:
+  workflow_dispatch:
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Set up JDK 25
+        uses: actions/setup-java@v5
+        with:
+          java-version: '25'
+          distribution: 'temurin'
+          cache: maven
+      - name: Run Main
+        run: |
+          mvn compile exec:java -Dexec.mainClass="script.Update" -f script/pom.xml
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "wushuo894@outlook.com"
+          git config --local user.name "wushuo"
+          git add .
+          git commit -m "自动更新: $(date '+%Y-%m-%d %H:%M:%S')" || exit 0
+          git push
