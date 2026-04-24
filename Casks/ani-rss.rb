@@ -5,9 +5,10 @@ cask "ani-rss" do
   sha256 "8c992b7d87f937b2a17ee7f36a3d5113f09e6f77112a62985ec2501683b40320"
 
   name "ani-rss"
-  desc "基于RSS自动追番、订阅、下载、刮削"
-  homepage "https://github.com/wushuo894/ani-rss"
+  desc "基于RSS自动追番、订阅、下载、刮削、洗版"
+  homepage "https://docs.wushuo.top/"
 
+  depends_on macos: ">= :big_sur"
   auto_updates true
 
   app "ani-rss.app"
@@ -26,5 +27,9 @@ cask "ani-rss" do
       # 验证权限
       puts "✅ 权限已设置"
       system "ls -ld #{appdir}/ani-rss.app"
+  end
+  caveats do
+      depends_on_java "17+"
+      unsigned_accessibility
   end
 end
