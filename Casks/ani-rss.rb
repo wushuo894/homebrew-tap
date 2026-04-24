@@ -13,11 +13,6 @@ cask "ani-rss" do
 
   app "ani-rss.app"
 
-  livecheck do
-    url "https://github.com/wushuo894/ani-rss"
-    strategy :github_latest
-  end
-
   caveats do
       depends_on_java "17+"
       unsigned_accessibility
