@@ -13,6 +13,16 @@ cask "ani-rss" do
 
   app "ani-rss.app"
 
+  livecheck do
+    url "https://github.com/wushuo894/ani-rss"
+    strategy :github_latest
+  end
+
+  caveats do
+      depends_on_java "17+"
+      unsigned_accessibility
+  end
+
   postflight do
       # 设置应用程序权限
       system_command '/bin/chmod',
@@ -27,9 +37,5 @@ cask "ani-rss" do
       # 验证权限
       puts "✅ 权限已设置"
       system "ls -ld #{appdir}/ani-rss.app"
-  end
-  caveats do
-      depends_on_java "17+"
-      unsigned_accessibility
   end
 end
