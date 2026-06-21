@@ -1,8 +1,8 @@
 cask "ani-rss" do
-  version "3.1.52"
+  version "3.1.53"
 
   url "https://github.com/wushuo894/ani-rss/releases/download/v#{version}/ani-rss.dmg"
-  sha256 "84aaaefc69dc24cce0af8a93edb71d56ae504f0bb119b48084a83ef3ba7a7036"
+  sha256 "e7f3c82c63c9d696697357e178a028f6efc5abccb6806496e89da7c77590c443"
 
   name "ani-rss"
   desc "基于RSS自动追番、订阅、下载、刮削、洗版"
