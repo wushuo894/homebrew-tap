@@ -17,20 +17,4 @@ cask "ani-rss" do
       depends_on_java "17+"
       unsigned_accessibility
   end
-
-  postflight do
-      # 设置应用程序权限
-      system_command '/bin/chmod',
-                      args: ['-R', '755', "#{appdir}/ani-rss.app"],
-                      sudo: false
-
-      # 移除隔离属性（解决"文件已损坏"问题）
-      system_command '/usr/bin/xattr',
-                     args: ['-cr', "#{appdir}/ani-rss.app"],
-                     sudo: false
-
-      # 验证权限
-      puts "✅ 权限已设置"
-      system "ls -ld #{appdir}/ani-rss.app"
-  end
 end
