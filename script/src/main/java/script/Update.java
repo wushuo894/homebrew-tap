@@ -15,6 +15,7 @@ public class Update {
     static void main() {
         // updateCask("ani-rss", "ani-rss.dmg");
         updateCask("ani-rss-desktop", "ani-rss-desktop-%s-arm64.dmg");
+        updateCask("rename-studio", "rename-studio-%s-arm64.dmg");
     }
 
     // 根据最新发布的标签和对应 DMG 的摘要更新 Cask。
