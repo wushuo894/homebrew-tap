@@ -1,6 +1,6 @@
 cask "ani-rss-desktop" do
   version "0.4.0"
-  sha256 "d8d7c4f04613414d4b87b0b5f02eadae9e4f6a37bfd5c41b61d1e5b1a4f49c67"
+  sha256 "9c799ca214ab84c3946055de2e4439a78a23cd066d9c94f80570f0f57f7c2136"
 
   url "https://github.com/wushuo894/ani-rss-desktop/releases/download/v#{version}/ani-rss-desktop-#{version}-arm64.dmg"
   name "ANI-RSS Desktop"
