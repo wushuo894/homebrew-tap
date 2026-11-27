@@ -1,6 +1,6 @@
 cask "rename-studio" do
-  version "0.2.0"
-  sha256 "6634057ac031554bc8d618066af817e2c0f1f313b018a3d9e37baf8ac55f97f3"
+  version "0.2.1"
+  sha256 "3171625388bc956b487e6747b73a1d46f9f1fa7a6250b9d1f54de914e44f12dc"
 
   url "https://github.com/wushuo894/rename-studio/releases/download/v#{version}/rename-studio-#{version}-arm64.dmg"
   name "Rename Studio"
